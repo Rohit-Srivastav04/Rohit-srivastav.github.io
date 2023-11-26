@@ -857,7 +857,7 @@ footer section start
 
 @media (max-width: 75em) {
     html {
-        font-size: 56%;
+        font-size: 80%;
     }
     .container {
         max-width: 110rem;
@@ -872,7 +872,7 @@ footer section start
 
 @media (max-width: 980px) {
     html {
-        font-size: 55%;
+        font-size: 70%;
     }
     .section-hero h1 {
         line-height: 1;
@@ -941,17 +941,28 @@ footer section start
     .container {
         max-width: 70rem;
     }
-    html {
-        font-size: 33%;
-    }
     .section-hero .grid-two-column {
         grid-template-columns: 1fr;
     }
     .section-hero-data {
         align-items: center;
     }
-    .section-hero-data h1 {
-        font-size: 3.4rem;
+    .section-hero-image {
+        width: 90%;
+    }
+    .hero-para {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .section-biodata .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+    .section-biodata .bio-image {
+        grid-row: 2;
+        margin-top: 3.2rem;
+    }
+    .section-protfolio .grid-three-column {
+        grid-template-columns: 1fr;
     }
     .section-services .grid-three-column {
         grid-template-columns: repeat(1, 1fr);
@@ -959,10 +970,50 @@ footer section start
     .section-services .grid {
         gap: 6rem;
     }
-    .hero-img {
-        grid-row: 2;
-    }
-    .grid-four-column {
+    .section-work-data .grid-four-column {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+    .mgw {
+        gap: 1.2rem;
+    }
+    .btn {
+        padding: 1rem 2rem;
+    }
+    .counter-numbers {
+        font-size: 3.2rem;
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    .service-box {
+        width: 30rem;
+        /* margin-left: -30px; */
+    }
+    .har-pal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    /* swiper */
+    .swiper .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+    .section-freelancing h2 {
+        font-size: 3.6rem;
+    }
+    .section-footer .f-about,
+    .section-footer .f-address {
+        grid-column: 1/-1;
+    }
+    .section-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
