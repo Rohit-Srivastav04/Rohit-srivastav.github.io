@@ -5,30 +5,13 @@
 }
 
 :root {
-    --heading: rgb(0, 0, 0);
-    --para: #1c1c1c;
-    --para-tint: #181818;
-    --white: #000000;
-    --black: #000000;
-    --helper-tint: #000000;
-    --helper: #006eff98;
-    --bg: rgb(226, 226, 226);
-    --gradient: linear-gradient(0deg, rgb(116, 128, 255) 0%, rgb(98 189 252) 100%);
-    --gradientSupport: rgba(1, 94, 255, 0.785);
-    --shadow: 0px 0px 20px 0px rgb(0, 84, 240);
-    --shadowbtn: 0 2rem 2rem 0 rgba(0, 85, 255, 0.361);
-    --msg: rgb(225, 225, 225);
-    --navbar: rgb(2, 52, 253)(0, 0, 255, 0.95);
-}
-
-.darkmood {
     --navbar: rgb(2, 52, 253)(0, 0, 255, 0.95);
     --heading: (0 10 45);
     --para: #fffafa;
-    --para-tint: #e4e4e4;
+    --para-tint: #000000e1;
     --white: #ffffff;
     --black: #f4f4f4;
-    --helper-tint: #161720;
+    --helper-tint: #17171f;
     /* --helper: #6473f4; */
     --helper: #0051ff;
     --bg: rgb;
@@ -41,6 +24,29 @@
     --para: #d8d6d6;
     --bg: black;
     --msg: rgb(36, 35, 35);
+    --help: blue;
+    --wh: blue;
+  
+}
+
+.darkmood {
+    --wh: white;
+    --help: blue;
+    --heading: rgb(0, 0, 0);
+    --para: #1c1c1c;
+    --para-tint: #919090;
+    --white: #000000;
+    --black: #000000;
+    --helper-tint: #ffffff;
+    --helpe: rgb(3, 7, 252);
+    --helper: #ffffff;
+    --bg: rgb(255, 255, 255);
+    --gradient: linear-gradient(0deg, rgb(116, 128, 255) 0%, rgb(98 189 252) 100%);
+    --gradientSupport: #001aff;
+    --shadow: 0px 0px 20px 0px rgb(0, 84, 240);
+    --shadowbtn: 0 2rem 2rem 0 rgba(0, 85, 255, 0.361);
+    --msg: rgb(225, 225, 225);
+    --navbar: rgb(2, 52, 253)(0, 0, 255, 0.95);
 }
 
 #ico {
@@ -117,10 +123,11 @@ li {
 }
 
 span {
-    color: var(--helper);
+    color: var(--help);
 }
 
 .navbar {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -166,10 +173,10 @@ span {
 ======================*/
 
 .btn {
-    background: var(--gradientSupport);
+    background: rgb(59, 59, 241);
     padding: 1.6rem 3.2rem;
     border: none;
-    color: var(--helper-tint);
+    color: var(--black);
     display: inline-block;
     text-transform: uppercase;
     font-size: 1.8rem;
@@ -182,6 +189,7 @@ span {
 .btn:hover,
 .btn:visited {
     box-shadow: var(--shadowbtn);
+    color: var(--para);
 }
 
 .common-heading {
@@ -202,7 +210,7 @@ span {
     left: 0;
     width: 1.5rem;
     height: 1.5rem;
-    background: var(--helper);
+    background: var(--helpe);
 }
 
 .common-heading::after {
@@ -211,7 +219,7 @@ span {
     top: 120%;
     left: 1.5rem;
     min-width: 20rem;
-    background: var(--helper);
+    background: var(--helpe);
     height: 0.3rem;
 }
 
@@ -229,7 +237,7 @@ span {
 ==================*/
 
 .section {
-    padding: 9rem;
+    padding: 9rem 3rem 9rem 3rem;
 }
 
 .grid {
@@ -301,7 +309,7 @@ span {
 
 .bio-image>img {
     width: 80%;
-    box-shadow: -2rem -2rem 0 0 var(--helper);
+    box-shadow: -2rem -2rem 0 0 var(--helpe);
     display: inline-block;
 }
 
@@ -368,8 +376,8 @@ span {
     position: absolute;
     top: 1.8rem;
     width: 4rem;
-    background-color: var(--helper);
-    color: var(--white);
+    background-color: var(--helpe);
+    color: var(--wh);
     height: 2rem;
     display: flex;
     align-items: center;
@@ -403,9 +411,9 @@ span {
     position: absolute;
     height: 0;
     width: 0;
-    border: 0.8rem solid var(--helper);
+    border: 0.8rem solid var(--helpe);
     border-color: transparent;
-    border-bottom-color: var(--helper);
+    border-bottom-color: var(--helpe);
     top: -1.5rem;
 }
 
@@ -623,7 +631,7 @@ our services section start here
     left: 50%;
     border: 5rem solid var(--para);
     border-color: transparent;
-    border-top-color: var(--helper);
+    border-top-color: var(--helpe);
 }
 
 .swiper-client-mg p::before {
@@ -660,6 +668,19 @@ our services section start here
     align-items: center;
     margin-top: 3.2rem;
     gap: 1.2rem;
+}
+
+
+/* 
+  design protofolio
+*/
+
+.common-heading {
+    text-align: center;
+    background-color: #001aff;
+    color: #d8d6d6;
+    width: 100%;
+    border-radius: 10px;
 }
 
 
@@ -702,6 +723,10 @@ freelancing section start here
     color: #fff;
 }
 
+.container>span {
+    color: red;
+}
+
 
 /* ===============================
 contact section start now
@@ -727,7 +752,7 @@ contact section start now
 .section-contact-main textarea,
 .section-contact-main input {
     padding: 1.5rem 2rem;
-    border: 0.1rem solid #0051ff;
+    border: 0.1rem solid #002fff;
     border-radius: 10px;
     font-size: 1.6rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -750,7 +775,7 @@ footer section start
 */
 
 .section-footer {
-    background-color: var(--helper-tint);
+    background-color: #17171f;
     transition: all 0.7s linear;
 }
 
@@ -760,7 +785,7 @@ footer section start
 }
 
 .f-about p {
-    color: rgb(186, 178, 178);
+    color: rgb(229, 225, 225);
 }
 
 .f-link ul,
@@ -800,19 +825,23 @@ footer section start
     width: 5rem;
     height: 5rem;
     animation: water-wave 3s linear infinite;
-    background-color: #1b1e3b;
+    background-color: #001aff;
     gap: 1.2rem;
 }
 
 .f-credits {
     text-align: center;
-    color: whitesmoke;
+    color: rgb(255, 0, 0);
 }
 
 .section a:hover,
 .section a:active {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     box-shadow: var(--shadowbt);
+}
+
+.f-credits>p {
+    color: white;
 }
 
 
@@ -857,7 +886,7 @@ footer section start
 
 @media (max-width: 75em) {
     html {
-        font-size: 80%;
+        font-size: 60%;
     }
     .container {
         max-width: 110rem;
@@ -872,7 +901,13 @@ footer section start
 
 @media (max-width: 980px) {
     html {
-        font-size: 70%;
+        font-size: 60%;
+    }
+    .section-hero .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+    .section-biodata .grid-two-column {
+        grid-template-columns: 1fr;
     }
     .section-hero h1 {
         line-height: 1;
@@ -938,8 +973,11 @@ footer section start
 }
 
 @media (max-width: 790px) {
+    html {
+        font-size: 45%;
+    }
     .container {
-        max-width: 70rem;
+        max-width: 100%;
     }
     .section-hero .grid-two-column {
         grid-template-columns: 1fr;
@@ -954,18 +992,18 @@ footer section start
         text-align: center;
         margin-top: 2rem;
     }
-    .section-biodata .grid-two-column {
-        grid-template-columns: 1fr;
+    .section-biodata .grid-three-column {
+        grid-template-columns: 1fr 1fr;
     }
     .section-biodata .bio-image {
         grid-row: 2;
         margin-top: 3.2rem;
     }
     .section-protfolio .grid-three-column {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .section-services .grid-three-column {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
     .section-services .grid {
         gap: 6rem;
@@ -975,45 +1013,31 @@ footer section start
     }
 }
 
-@media (max-width: 500px) {
-    html {
-        font-size: 50%;
-    }
-    .mgw {
-        gap: 1.2rem;
-    }
-    .btn {
-        padding: 1rem 2rem;
-    }
-    .counter-numbers {
-        font-size: 3.2rem;
-        padding: 2rem 2rem 2rem 2rem;
-    }
-    .service-box {
-        width: 30rem;
-        /* margin-left: -30px; */
-    }
-    .har-pal {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    /* swiper */
-    .swiper .grid-two-column {
+@media (max-width: 600px) {
+    .section-services .grid-three-column {
         grid-template-columns: 1fr;
     }
-    .section-freelancing h2 {
-        font-size: 3.6rem;
+    .section-protfolio .grid-three-column {
+        grid-template-columns: 1fr;
     }
-    .section-footer .f-about,
-    .section-footer .f-address {
-        grid-column: 1/-1;
+    .service-box {
+        max-width: 90%;
     }
-    .section-footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    .section-freelancing {
+        background-image: url(../imges/bkground.png);
+        background-repeat: repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+        transition: all 0.7s linear;
+        text-align: center;
+        position: relative;
+    }
+    .section-freelancing .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(117, 51, 223, 0.39);
     }
 }
